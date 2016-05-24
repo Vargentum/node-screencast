@@ -1,12 +1,13 @@
+var db = require('db')
+
 function User (name) {
   this.name = name
 }
 
-User.prototype.greet = function(who) {
-  return this.name + " greets " + who
+User.prototype.says = function(who) {
+  return this.name + " says " + who + "."
 }
 
-console.log('user is required')
+console.log(new User('Tom').says('init'))
 
-// exports.User = User // add as method
-module.exports = User // rewrite exports prop
+module.exports = User
