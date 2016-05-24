@@ -8,4 +8,5 @@ User.prototype.greet = function(who) {
 
 console.log('user is required')
 
-exports.User = User
+// exports.User = User // add as method
+module.exports = User // rewrite exports prop
